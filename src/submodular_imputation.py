@@ -1,4 +1,7 @@
-from submodular_metric.src import *
+import sys
+sys.path.append('./submodular_metric')
+from src.submodular import *
+
 from src.myImputationTools import *
 
 from sklearn.preprocessing import MinMaxScaler

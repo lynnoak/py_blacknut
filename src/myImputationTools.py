@@ -45,13 +45,13 @@ class Imputer(object):
     y_imp = {}
     error_imp ={}
 
-    def __init__(self,X = X_nan,y =y,X_train=None,alg =['Listwise'],metric = 'nan_euclidean'):
+    def __init__(self,X = X_nan,y =y,X_train = np.array(None),alg =['Listwise'],metric = 'nan_euclidean'):
         self.X = X
         X_original = X
         index_listwise = [i for i in range(X[:, 0].size) if sum(np.isnan(X[i, :])) == 0]
         X_listwise = X[index_listwise, :]
         y_listwise = y[index_listwise]
-        if X_train ==None:
+        if X_train.all() == None:
             self.X_train = X_original
         else:
             self.X_train = X_train

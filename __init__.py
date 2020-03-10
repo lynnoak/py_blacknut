@@ -6,30 +6,28 @@ Python 3.5.4 |Anaconda custom (64-bit)| (default, Aug 14 2017, 13:41:13)
 """
 
 
-import time
 import pprint
-from src.myML import *
 from src.datasets import *
-from src.imputation import *
-from sklearn import preprocessing
-from collections import Counter
-from imblearn.over_sampling import SMOTE
-
+from src.myMLtools import *
+from src.myImputationTools import *
+from src.submodular_imputation import *
 
 """
 Set for the configuration
 Y = ["stop_kind","status"] for data_error
 Y = ["audio", "play", "video"] for data_feedbacks
-imput = ["Listwise","SimpleImputer","IterativeImputer","KNNImputer"]
+imput = ['Listwise','SimpleImputer_mean','SimpleImputer_median','SimpleImputer_most_frequent','IterativeImputer','KNNImputer']
 X_train = ["original","listwise","running"] "running" only for data_error
-strategy = ["mean","median","most_frequent"]
 """
-myconf = ["audio","KNNImputer"," "," "]
-title_conf = myconf[0]+'_'+myconf[1]+'_'+myconf[2]+'_'+myconf[3]+'_'
+
+myconf = ["audio","KNNImputer"," ",]
+title_conf = myconf[0]+'_'+myconf[1]+'_'+myconf[2]+'_'
 
 #Loading Dataset
 #X,Y_running,Y_stopkind,Y_status,Y_stopinfor = data_2000()
 X, Y_audio, Y_play, Y_video =data_feedbacks()
+#Y = Y_stopkind
+y = Y_audio
 
 #Finding the Listwise and Only-running data
 X_original = X
@@ -44,13 +42,8 @@ X_running = X_listwise
 X_train_conf = {"original":X_original,"listwise":X_listwise,"running":X_running}
 X_train = X_train_conf.get(myconf[2],X_original)
 
-#Configuration for the imputation algorithms
-myIMP_conf = {"Listwise":X_listwise,
-        "SimpleImputer":mySimImp(X_original,X_train,myconf[3]),
-        "IterativeImputer":myIterImp(X_original,X_train),
-        "KNNImputer":myKNNImp(X_original)}
-X = myIMP_conf.get(myconf[1],X_listwise)
-
+imp = Imputer(X = X,y =y,X_train=X_train,alg = myconf[1],metric = 'nan_euclidean')
+X_imp = imp.X_imp[myconf[1]]
 """
 Configuration for parameters: 
 K: K for KNN algorithms
@@ -61,36 +54,14 @@ K = 5
 num_constraints = 500#(int(X.shape[0]/500)+1)*100
 scoring='acc'
 S = {}
-#Y = Y_stopkind
-Y = Y_audio
-
-
-if myconf[1] == "Listwise":
-    Y = Y[index_listwise]
-    
-index = [i for i in range(len(Y)) if Counter(Y)[Y[i]]>=6]
-X = X[index,:]
-Y = Y[index]
-X,Y = SMOTE().fit_resample(X, Y)
-
-#Euclidean distance
-S['Euc.'] = ColKNNScore(X,Y,K,scoring = scoring,title="Euc.")
-my3Dplot(X,Y,title_conf+'Euc.')
-
-#PCA
-X_normalize = normalize(X,axis=0)
-pca = decomposition.PCA(n_components=0.9).fit(X_normalize)
-X_pca = pca.transform(X_normalize)
-print("Number of dimension after PCA:"+str(len(X_pca[0]))+ "\n")
-if len(X_pca[0])<3:
-    pca = decomposition.PCA(n_components=3).fit(X_normalize)
-    X_pca = pca.transform(X_normalize)
-S['PCA']  = ColKNNScore(X_pca,Y,K,scoring = scoring,title="PCA")
-my3Dplot(X_pca,Y,title_conf+'PCA')
 
 #Metric Learning
-St, metricL = myMl(X,Y,K =K, scoring=scoring,num_constraints=num_constraints,title=title_conf)
-S =dict(S,**St)
+ml = NormalML(alg=['NCA'], X=X_imp, y=y, num_constraints=num_constraints,n_neighbors = K ,P_power = 2, scoring = scoring)
+S = ml.ColKNNScore()
+
+submodular = SubmodularWithNan(X_nan = X, y=y, imp_alg = myconf[1],style = 0, num_constraints =num_constraints)
+St = submodular.ColKNNScore()
+S = dict(S,**St)
 
 #Saving the result
 saveout = sys.stdout
@@ -105,7 +76,6 @@ if myconf[2] != '':
 if myconf[3] != '':
     print("Imputation Strategy: " + myconf[3] + "\n")
 print("Number of constraints:"+str(num_constraints)+ "\n")
-print("Number of dimension after PCA:"+str(len(X_pca[0]))+ "\n")
 print("\n-------------------\n\n")
 pprint.pprint(S, width=1)
 print("\n\n\n-------------------\n\n")
