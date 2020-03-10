@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0b680988-67e8-406e-9af5-f2da066db0c5" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>, 2</find>
+      <find>fig</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/blacknut" />
+  </component>
+  <component name="ProjectId" id="1Wn1XOr4R3gy2IBT38lCcHxABp1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="py_blacknut" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.__init__" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b680988-67e8-406e-9af5-f2da066db0c5" name="Default Changelist" comment="" />
+      <created>1573740355088</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573740355088</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="730" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579873791471">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="730" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1579873791471" />
+    <state x="164" y="96" width="1657" height="885" key="DiffContextDialog" timestamp="1580304612764">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="164" y="96" width="1657" height="885" key="DiffContextDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1580304612764" />
+    <state x="720" y="297" key="FileChooserDialogImpl" timestamp="1581341526578">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="720" y="297" key="FileChooserDialogImpl/65.24.1855.1056@65.24.1855.1056" timestamp="1581341526578" />
+    <state x="823" y="415" key="Github.ShareDialog" timestamp="1583845830384">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="823" y="415" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583845830384" />
+    <state width="1832" height="295" key="GridCell.Tab.0.bottom" timestamp="1581956279003">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="295" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1581956279003" />
+    <state width="1832" height="295" key="GridCell.Tab.0.center" timestamp="1581956279003">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="295" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1581956279003" />
+    <state width="1832" height="295" key="GridCell.Tab.0.left" timestamp="1581956279002">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="295" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1581956279002" />
+    <state width="1832" height="295" key="GridCell.Tab.0.right" timestamp="1581956279003">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="295" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1581956279003" />
+    <state x="330" y="153" key="SettingsEditor" timestamp="1583845721367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="330" y="153" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583845721367" />
+    <state x="384" y="179" key="SettingsEditor/65.24.1855.1056@65.24.1855.1056" timestamp="1581414261828" />
+    <state width="927" height="542" key="XDebugger.FullValuePopup" timestamp="1579788012360">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="927" height="542" key="XDebugger.FullValuePopup/65.24.1855.1056@65.24.1855.1056" timestamp="1579788012360" />
+    <state x="632" y="236" width="719" height="678" key="search.everywhere.popup" timestamp="1579774624986">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="632" y="236" width="719" height="678" key="search.everywhere.popup/65.24.1855.1056@65.24.1855.1056" timestamp="1579774624986" />
+  </component>
+</project>
