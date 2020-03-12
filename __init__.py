@@ -29,6 +29,8 @@ X, Y_audio, Y_play, Y_video =data_feedbacks()
 #Y = Y_stopkind
 y = Y_audio
 
+X = data_percent(X)
+
 #Finding the Listwise and Only-running data
 X_original = X
 index_listwise = [i for i in range(X[:,0].size) if sum(np.isnan(X[i, :])) == 0]
@@ -56,7 +58,7 @@ scoring='acc'
 S = {}
 
 #Metric Learning
-ml = NormalML(alg=['NCA'], X=X_imp, y=y, num_constraints=num_constraints,n_neighbors = K ,P_power = 2, scoring = scoring)
+ml = NormalML(alg=['test'], X=X_imp, y=y, num_constraints=num_constraints,n_neighbors = K ,P_power = 2, scoring = scoring)
 S = ml.ColKNNScore()
 
 submodular = SubmodularWithNan(X_nan = X, y=y, imp_alg = myconf[1],style = 0, num_constraints =num_constraints)
@@ -73,8 +75,6 @@ print("Target Label: " + myconf[0] + "\n")
 print("Imputation Processing: " + myconf[1] + "\n")
 if myconf[2] != '':
     print("Imputation Train Set: " + myconf[2] + "\n")
-if myconf[3] != '':
-    print("Imputation Strategy: " + myconf[3] + "\n")
 print("Number of constraints:"+str(num_constraints)+ "\n")
 print("\n-------------------\n\n")
 pprint.pprint(S, width=1)

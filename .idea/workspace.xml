@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b680988-67e8-406e-9af5-f2da066db0c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pymice-master/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pymice-master/README.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pymice-master/data/missingdata.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pymice-master/data/missingdata_mcar.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pymice-master/pymice/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pymice-master/pymice/amputation/ampute.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pymice-master/pymice/amputation/test_ampute.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pymice-master/pymice/exploration/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pymice-master/pymice/exploration/mcar_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pymice-master/pymice/imputation/plot_multiple_imputation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pymice-master/unittest_mcar_tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/datasets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myImputationTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/myImputationTools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/submodular_imputation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/submodular_imputation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +34,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Wn1XOr4R3gy2IBT38lCcHxABp1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -92,19 +103,14 @@
     </task>
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="730" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579873791471">
-      <screen x="65" y="24" width="1855" height="1056" />
+    <state x="688" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584038983207">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="688" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584038983207" />
     <state x="730" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1579873791471" />
     <state x="164" y="96" width="1657" height="885" key="DiffContextDialog" timestamp="1580304612764">
       <screen x="65" y="24" width="1855" height="1056" />
@@ -118,31 +124,35 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="823" y="415" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583845830384" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1583848530071">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1584038943830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583848530071" />
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584038943830" />
     <state width="1832" height="295" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1581956279003" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1583848530071">
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1584038943830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583848530071" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584038943830" />
     <state width="1832" height="295" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1581956279003" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1583848530071">
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1584038943829">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583848530071" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584038943829" />
     <state width="1832" height="295" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1581956279002" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1583848530071">
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1584038943830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583848530071" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584038943830" />
     <state width="1832" height="295" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1581956279003" />
     <state x="330" y="153" key="SettingsEditor" timestamp="1583845721367">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="330" y="153" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583845721367" />
     <state x="384" y="179" key="SettingsEditor/65.24.1855.1056@65.24.1855.1056" timestamp="1581414261828" />
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1584049296705">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584049296705" />
     <state width="927" height="542" key="XDebugger.FullValuePopup" timestamp="1579788012360">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>

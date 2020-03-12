@@ -1,7 +1,12 @@
 import sys
 sys.path.append("..")
+sys.path.append('./pymice-master')
+
 import numpy as np
 from sklearn import preprocessing
+
+from scipy.stats import entropy,wasserstein_distance
+from collections import Counter
 
 localrep ="./data/"
 
@@ -67,4 +72,50 @@ def data_2000():
     [X, Y_running, Y_stopkind, Y_status, Y_stopinfor] = data_error()
 
     return X[:2000,:],Y_running[:2000],Y_stopkind[:2000],Y_status[:2000],Y_stopinfor[:2000]
+
+def data_percent(X,percent = 0.8):
+
+    (m,n) =X.shape
+    p = []
+
+    for i in range(n):
+        tx = X[:,i]
+        index_listwise = [i for i in range(len(tx)) if not np.isnan(tx[i])]
+        tx = tx[index_listwise]
+        tn = Counter(tx).most_common(1)[0][1]
+        if (len(tx)-tn)/m >= percent:
+            p.append(i)
+
+    return X[:,p]
+
+def data_top(X,y,top = 12):
+    (m,n) =X.shape
+    top = min(top, n)
+    kl = np.zeros(n)
+    wd = np.zeros(n)
+    for i in range(n):
+        tx = X[:,i]
+        index_listwise = [i for i in range(len(tx)) if not np.isnan(tx[i])]
+        tx = tx[index_listwise]
+        ty = y[index_listwise]
+        kl[i] = entropy(tx, ty)
+        wd[i] = wasserstein_distance(tx, ty)
+
+    p = kl+wd
+    p = np.argpartition(p,-top)[-top:]
+    return X[:,p]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
